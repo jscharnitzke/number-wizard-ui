@@ -25,31 +25,25 @@ public class NumberWizard : MonoBehaviour
     {
         minNumber = min;
         maxNumber = max; // make max inclusive
-        guess = average(minNumber, maxNumber);
-        guessText.text = guess.ToString();
+        nextGuess();
     }
 
     public void guessHigher()
     {
-        minNumber = guess;
+        minNumber = maxNumber <= minNumber ? maxNumber : guess + 1; // exclude current min from future guesses
         nextGuess();
     }
 
     public void guessLower()
     {
-        maxNumber = guess;
+        maxNumber = minNumber >= maxNumber ? maxNumber : guess - 1; // exclude current max from future guesses
         nextGuess();
     }
 
     void nextGuess()
     {
-        guess = average(minNumber, maxNumber);
+        guess = Random.Range(minNumber, maxNumber + 1); // make sure the guess is inclusive
         guessText.text = guess.ToString();
-    }
-
-    int average(int a, int b)
-    {
-        return (a + b) / 2;
     }
 
     void gameOver()
