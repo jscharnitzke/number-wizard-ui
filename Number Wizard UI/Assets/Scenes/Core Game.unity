@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 1000
+  guessText: {fileID: 381283277}
 --- !u!4 &163973424
 Transform:
   m_ObjectHideFlags: 0
@@ -668,9 +669,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c0a3011e454e844caef59e975d321f2, type: 2}
-  m_sharedMaterial: {fileID: 21752899568155824, guid: 4c0a3011e454e844caef59e975d321f2,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
